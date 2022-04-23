@@ -1,8 +1,8 @@
-#lesh
+# lesh
 import time
 import datetime
 from pytz import timezone
- 
+
 time_now = datetime.datetime.now(timezone('Asia/Seoul'))
 time_now = str(time_now)
 simple_time_now = (time_now)[:16]
@@ -10,7 +10,7 @@ print(f"작성 시간 : {simple_time_now}")
 
 html_name = input("html 파일 이름 : ")
 wpahr = input("글 제목 : ")
-wkrtjdwk = "LESH" # 작성자
+wkrtjdwk = "LESH"  # 작성자
 sodyd = input("글 내용 : ")
 print(f"글 제목: {wpahr}")
 print(f"글 내용: {sodyd}")
@@ -33,6 +33,12 @@ html_form = f""" <!-- auto-uploded-by-lesh -->
             <h1 class="content-title">{wpahr}</h1>
                 <p class="page-information">
                     <span>{wkrtjdwk} | {simple_time_now}</span>
+                    <span>
+                        <input type="button" value="라이트 모드" onclick="daynight();" class="daynight">
+                        <input type="button" value="다크 모드" onclick="nightday();" class="nightday"
+                            style="display: none;">
+
+                    </span>
                 </p>
         </header>
         <hr class="title-hr">
@@ -60,7 +66,7 @@ html_form = f""" <!-- auto-uploded-by-lesh -->
     </footer>
     </div>        
 </div>
-
+    <script src="src/index.js"></script>
 </body>
 </html>
 """
