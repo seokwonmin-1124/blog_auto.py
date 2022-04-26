@@ -32,7 +32,7 @@ html_form = f""" <!-- auto-uploded-by-lesh -->
         <header class="page-header">
             <h1 class="content-title">{wpahr}</h1>
                 <p class="page-information">
-                    <span>{wkrtjdwk} | {simple_time_now}</span>
+                    <span class="info">{wkrtjdwk} | {simple_time_now}</span>
                     <span>
                         <input type="button" value="라이트 모드" onclick="daynight();" class="daynight">
                         <input type="button" value="다크 모드" onclick="nightday();" class="nightday"
@@ -66,6 +66,7 @@ html_form = f""" <!-- auto-uploded-by-lesh -->
     </footer>
     </div>        
 </div>
+    <style></style>
     <script src="src/index.js"></script>
 </body>
 </html>
